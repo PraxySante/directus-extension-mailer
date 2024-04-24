@@ -59,6 +59,7 @@ export default (router, { services, env }) => {
     let create = async (body) => {
       let mail = new Object();
 
+      mail.fromName = body.fromName;
       mail.to = body.to;
       mail.template = body.template;
       mail.subject = body.subject;
